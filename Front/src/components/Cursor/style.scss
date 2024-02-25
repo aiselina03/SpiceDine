@@ -1,0 +1,21 @@
+#cursor {
+    position: fixed;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#cursor-border {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.1s ease-out;
+    z-index: 99;
+}

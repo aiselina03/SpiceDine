@@ -1,0 +1,136 @@
+.chefAbout {
+  width: 100%;
+  max-width: 100%;
+  .chefMaster {
+    max-width: 100%;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .chefImage {
+      width: 60%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .chefJonathon {
+      width: 40%;
+      position: absolute;
+      left: 45%;
+      bottom: 4px;
+      background-color: #16272d;
+      padding: 30px;
+      h2 {
+        font-size: 38px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 20px 0;
+      }
+      h3 {
+        font-style: italic;
+        color: #cdc5b9;
+        font-size: 24px;
+        font-family: "Cormorant", serif;
+      }
+      p {
+        color: #cdc5b9;
+        font-size: 16px;
+        font-family: "Roboto", serif;
+        margin: 20px 0;
+        line-height: 25px;
+      }
+      img {
+        width: 200px;
+      }
+    }
+  }
+  .chefAssistant {
+    width: 80%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .assistantImage {
+      overflow: hidden;
+      img {
+        transition: all 600ms;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .assistantAbout {
+      background-color: #16272d;
+      padding: 30px;
+      span {
+        font-style: italic;
+        color: #cdc5b9;
+        font-size: 24px;
+        font-family: "Cormorant", serif;
+      }
+      h2 {
+        font-size: 38px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 5px 0;
+      }
+      p {
+        width: 80%;
+        color: #cdc5b9;
+        font-size: 16px;
+        font-family: "Roboto", serif;
+        margin: 10px 0;
+        line-height: 26px;
+      }
+    }
+    .circle {
+      background-image: url("/src/images/snare-1.png");
+      width: 369px;
+      height: 369px;
+      border-radius: 50%;
+      animation: rotate 7s infinite linear;
+      transform: rotate(360deg);
+      position: absolute;
+      top: 130%;
+      left: -10%;
+    }
+  }
+  .allChef {
+    width: 100%;
+    max-width: 100%;
+    min-height: 90vh;
+    position: relative;
+    .text {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 48px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,306 @@
+.drinksMenu {
+  width: 90%;
+  margin: 60px auto;
+  .dMenu {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    .menuPhoto {
+      width: 450px;
+      height: 700px;
+      background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.35),
+          rgba(0, 0, 0, 0.35)
+        ),
+        url("/src/images/img_13.jpg");
+      background-size: cover;
+      background-attachment: scroll;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-family: "Cormorant", serif;
+        color: wheat;
+        width: 400px;
+        font-weight: bold;
+        font-size: 26px;
+      }
+      p {
+        margin: 10px 0;
+        color: #cdc5b9;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Roboto", sans-serif;
+        width: 250px;
+      }
+      h3 {
+        font-family: "Cormorant", serif;
+        color: wheat;
+        font-weight: 800;
+        font-size: 32px;
+      }
+    }
+    .menuDrinks {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      .headers {
+        text-align: center;
+        font-family: "Cormorant", serif;
+        margin-bottom: 20px;
+        p {
+          color: #cdc5b9;
+          font-size: 20px;
+          font-style: italic;
+        }
+        h1 {
+          font-size: 30px;
+          color: #c7a97f;
+        }
+      }
+      .drinks {
+        margin: 10px 0;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        .head {
+          h2 {
+            font-family: "Cormorant", serif;
+            color: #c7a97f;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          p {
+            margin: 5px 0;
+            font-family: "Roboto", serif;
+            color: #cdc5b9;
+            font-size: 15px;
+          }
+        }
+        .price {
+          p {
+            font-size: 28px;
+            font-family: "Cormorant", serif;
+            color: #c7a97f;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+.loaderCenterCards {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa-spin {
+    font-size: 55px;
+    color: #c7a97f;
+  }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .drinksMenu {
+    .dMenu {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: auto ;
+      gap: 50px;
+      .menuPhoto {
+        width: 280px;
+        height: 400px;
+        h2 {
+          width: 290px;
+        }
+        p {
+          width: 250px;
+        }
+      }
+      .menuDrinks {
+        width: 280px;
+        .headers {
+          p {
+            font-size: 20px;
+          }
+          h1 {
+            font-size: 25px;
+          }
+        }
+        .drinks {
+          .head {
+            h2 {
+              font-size: 18px;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 12px;
+            }
+          }
+          .price {
+            p {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .drinksMenu {
+    .dMenu {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: auto ;
+      gap: 50px;
+      .menuPhoto {
+        width: 450px;
+        height: 420px;
+        h2 {
+          width: 430px;
+        }
+        p {
+          width: 400px;
+        }
+      }
+      .menuDrinks {
+        width: 450px;
+        .headers {
+          p {
+            font-size: 22px;
+          }
+          h1 {
+            font-size: 26px;
+          }
+        }
+        .drinks {
+          .head {
+            h2 {
+              font-size: 19px;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 15px;
+            }
+          }
+          .price {
+            p {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .drinksMenu {
+    .dMenu {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: auto ;
+      gap: 50px;
+      .menuPhoto {
+        width: 700px;
+        height: 420px;
+        h2 {
+          width: 600px;
+        }
+        p {
+          width: 500px;
+        }
+      }
+      .menuDrinks {
+        width: 700px;
+        .headers {
+          p {
+            font-size: 22px;
+          }
+          h1 {
+            font-size: 26px;
+          }
+        }
+        .drinks {
+          .head {
+            h2 {
+              font-size: 19px;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 15px;
+            }
+          }
+          .price {
+            p {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+  .drinksMenu {
+    .dMenu {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: auto ;
+      gap: 60px;
+      .menuPhoto {
+        width: 900px;
+        height: 450px;
+        h2 {
+          width: 800px;
+        }
+        p {
+          width: 600px;
+        }
+      }
+      .menuDrinks {
+        width: 900px;
+        .headers {
+          p {
+            font-size: 25px;
+          }
+          h1 {
+            font-size: 29px;
+          }
+        }
+        .drinks {
+          .head {
+            h2 {
+              font-size: 22px;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 17px;
+            }
+          }
+          .price {
+            p {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

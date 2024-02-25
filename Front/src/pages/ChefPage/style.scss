@@ -1,0 +1,460 @@
+.chefPage {
+  width: 100%;
+  max-width: 100%;
+  .chefsPage {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+      ),
+      url("/src/images/bg-chef.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .headers {
+      margin-top: 80px;
+      h2 {
+        font-size: 68px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+      p {
+        width: 600px;
+        color: #cdc5b9;
+        font-size: 20px;
+        line-height: 40px;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .chefPage {
+    .chefsPage {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 35px;
+        }
+        p {
+          width: 260px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+    }
+    .chefAbout {
+      .chefMaster {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        .chefImage {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .chefJonathon {
+          width: 100%;
+          position: static;
+          h2 {
+            font-size: 22px;
+            margin: 20px 0;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+          img {
+            width: 150px;
+          }
+        }
+      }
+      .chefAssistant {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        .assistantAbout {
+          padding: 40px;
+          span {
+            font-size: 18px;
+          }
+          h2 {
+            font-size: 24px;
+            margin: 5px 0;
+          }
+          p {
+            width: 100%;
+            font-size: 16px;
+          }
+        }
+        .assistantImage {
+          img {
+            width: 100%;
+          }
+        }
+        .circle {
+          display: none;
+        }
+      }
+
+      .allChef {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .chefPage {
+    .chefsPage {
+      width: 100%;
+      height: 45vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 37px;
+        }
+        p {
+          width: 460px;
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+    }
+    .chefAbout {
+      .chefMaster {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        .chefImage {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .chefJonathon {
+          width: 100%;
+          position: static;
+          h2 {
+            font-size: 22px;
+            margin: 20px 0;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+          img {
+            width: 150px;
+          }
+        }
+      }
+      .chefAssistant {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        .assistantAbout {
+          padding: 40px;
+          span {
+            font-size: 18px;
+          }
+          h2 {
+            font-size: 24px;
+            margin: 5px 0;
+          }
+          p {
+            width: 100%;
+            font-size: 16px;
+          }
+        }
+        .assistantImage {
+          img {
+            display: none;
+          }
+        }
+        .circle {
+          display: none;
+        }
+      }
+
+      .allChef {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .chefPage {
+    .chefsPage {
+      width: 100%;
+      height: 40vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          width: 600px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+    .chefAbout {
+      .chefMaster {
+        min-height: auto;
+        .chefImage {
+          width: 70%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .chefJonathon {
+          width: 50%;
+          position: absolute;
+          left: 48%;
+          top: 20%;
+          padding: 30px;
+          h2 {
+            font-size: 20px;
+            margin: 10px 0;
+          }
+          h3 {
+            margin: 20px 0;
+            font-size: 16px;
+          }
+          p {
+            display: none;
+          }
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .chefAssistant {
+        gap: 30px;
+        .assistantImage {
+          width: 300px;
+          img {
+            width: 100%;
+          }
+        }
+        .assistantAbout {
+          padding: 30px;
+          width: 400px;
+          span {
+            font-size: 21px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            width: 100%;
+            font-size: 13px;
+          }
+          .paragraf {
+            display: none;
+          }
+        }
+        .circle {
+          display: none;
+        }
+      }
+      .allChef {
+        min-height: auto;
+        .text {
+          h2 {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
+  .chefPage {
+    .chefsPage {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          width: 700px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .chefPage {
+    .chefAbout {
+      .chefMaster {
+        min-height: auto;
+        .chefImage {
+          width: 70%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .chefJonathon {
+          width: 50%;
+          position: absolute;
+          left: 48%;
+          top: 20%;
+          padding: 30px;
+          h2 {
+            font-size: 24px;
+            margin: 10px 0;
+          }
+          h3 {
+            margin: 20px 0;
+            font-size: 14px;
+          }
+          p {
+            font-size: 13px;
+            display: block;
+          }
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .chefAssistant {
+        gap: 30px;
+        .assistantImage {
+          width: 400px;
+          img {
+            width: 100%;
+          }
+        }
+        .assistantAbout {
+          padding: 30px;
+          width: 550px;
+          span {
+            font-size: 21px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            width: 100%;
+            font-size: 13px;
+          }
+          .paragraf {
+          }
+        }
+        .circle {
+          display: none;
+        }
+      }
+      .allChef {
+        min-height: auto;
+        .text {
+          h2 {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1450px) {
+  .chefPage {
+    .chefAbout {
+      .chefMaster {
+        min-height: auto;
+        .chefImage {
+          width: 70%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .chefJonathon {
+          width: 50%;
+          position: absolute;
+          left: 48%;
+          top: 20%;
+          padding: 30px;
+          h2 {
+            font-size: 26px;
+            margin: 10px 0;
+          }
+          h3 {
+            margin: 20px 0;
+            font-size: 16px;
+          }
+          p {
+            font-size: 15px;
+            display: block;
+          }
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .chefAssistant {
+        gap: 30px;
+        .assistantImage {
+          width: 400px;
+          img {
+            width: 100%;
+          }
+        }
+        .assistantAbout {
+          padding: 30px;
+          width: 700px;
+          span {
+            font-size: 23px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            width: 100%;
+            font-size: 13px;
+          }
+        }
+      }
+      .allChef {
+        min-height: auto;
+        .text {
+          h2 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.servicesP {
+  width: 100%;
+  max-width: 100%;
+  min-height: 60vh;
+  .service {
+    margin: 70px auto;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+      }
+      p {
+        margin: 20px 0;
+        text-align: center;
+        line-height: 25px;
+        color: #cdc5b9;
+        font-size: 20px;
+        font-family: "Cormorant", serif;
+        font-style: italic;
+        width: 650px;
+      }
+    }
+    .sliderServices {
+      width: 100%;
+      max-width: 100%;
+      min-height: 60vh;
+      margin-top: 40px;
+      .photos {
+        padding: 0 15px;
+        outline: none;
+        img {
+          width: 700px;
+        }
+      }
+      .slick-prev {
+        display: none !important;
+      }
+
+      .slick-next {
+        display: none !important;
+      }
+
+      .slick-dots {
+        bottom: -40px !important;
+        li button:before {
+          color: #c7a97f !important;
+          font-size: 10px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,375 @@
+.accountPages {
+  width: 80%;
+  margin: 60px auto;
+  .accountPage {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    min-height: 50vh;
+    .nav {
+      width: 20%;
+      border-right: 1px solid #ffffff33;
+      font-family: "Cormorant", serif;
+      a {
+        color: #a5a099;
+        transition: all 600ms;
+        &:hover {
+          color: #c7a97f;
+        }
+      }
+      .active {
+        color: #c7a97f;
+      }
+      h2 {
+        font-size: 23px;
+        line-height: 60px;
+      }
+    }
+    .addresses {
+      width: 80%;
+      margin-left: 50px;
+      .head {
+        font-family: "Roboto", serif;
+        color: #a5a099;
+        font-size: 17px;
+        margin: 20px 0;
+      }
+      .addressData {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        .address1 {
+          width: 350px;
+          .billing {
+            padding: 20px 0;
+            border-bottom: 1px solid #ffffff33;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 150px;
+            h2 {
+              font-family: "Cormorant", serif;
+              color: #c7a97f;
+            }
+            button {
+              font-size: 15px;
+              border: none;
+              background-color: #c7a97f;
+              width: 50px;
+              height: 30px;
+              cursor: pointer;
+              color: #0b1315;
+              font-weight: bold;
+              transition: all 600ms;
+              &:hover {
+                background-color: #dcd7e3;
+              }
+            }
+          }
+          p {
+            margin: 20px 0;
+            font-family: "Roboto", serif;
+            color: #a5a099;
+            font-size: 17px;
+          }
+        }
+        .address2 {
+          width: 350px;
+          .shipping {
+            padding: 20px 0;
+            border-bottom: 1px solid #ffffff33;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 130px;
+
+            h2 {
+              font-family: "Cormorant", serif;
+              color: #c7a97f;
+            }
+            button {
+              font-size: 15px;
+              border: none;
+              background-color: #c7a97f;
+              width: 50px;
+              height: 30px;
+              cursor: pointer;
+              color: #0b1315;
+              font-weight: bold;
+              transition: all 600ms;
+              &:hover {
+                background-color: #dcd7e3;
+              }
+            }
+          }
+          p {
+            font-family: "Roboto", serif;
+            color: #a5a099;
+            font-size: 17px;
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 20px !important;
+        }
+      }
+      .addresses {
+        width: 100%;
+        margin-left: 0px !important;
+        .addressData {
+          display: grid;
+          grid-template-columns: auto;
+          align-items: center;
+          justify-content: center;
+          .address1 {
+            width: 100%;
+            .billing {
+              display: flex;
+              gap: 50px;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+          .address2 {
+            width: 100%;
+            .shipping {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 20px !important;
+        }
+      }
+      .addresses {
+        width: 100%;
+        margin-left: 0px !important;
+        .head {
+          text-align: center;
+        }
+        .addressData {
+          display: grid;
+          grid-template-columns: auto;
+          align-items: center;
+          justify-content: center;
+          .address1 {
+            width: 450px;
+            .billing {
+              display: flex;
+              gap: 50px;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+          .address2 {
+            width: 450px;
+            .shipping {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 0px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 20px !important;
+        }
+      }
+      .addresses {
+        width: 100%;
+        margin-left: 0px !important;
+        .head {
+          text-align: center;
+        }
+        .addressData {
+          display: grid;
+          grid-template-columns: auto auto;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+          .address1 {
+            width: 100%;
+            .billing {
+              display: flex;
+              gap: 50px;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+          .address2 {
+            width: 100%;
+            .shipping {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .addresses {
+        width: 100%;
+        margin-left: 20px !important;
+
+        .addressData {
+          display: grid;
+          grid-template-columns: auto auto;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+          .address1 {
+            width: 300px;
+            .billing {
+              display: flex;
+              gap: 50px;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+          .address2 {
+            width: 300px;
+            .shipping {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .addresses {
+        width: 100%;
+        margin-left: 20px !important;
+
+        .addressData {
+          display: grid;
+          grid-template-columns: auto auto;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+          .address1 {
+            width: 350px;
+            .billing {
+              display: flex;
+              gap: 50px;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+          .address2 {
+            width: 350px;
+            .shipping {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
