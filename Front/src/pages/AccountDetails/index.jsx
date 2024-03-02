@@ -62,10 +62,10 @@ function AccountDetails() {
                   .email("Invalid email address")
                   .required("Required"),
               })}
-              onSubmit={(values, { setSubmitting ,resetForm}) => {
+              onSubmit={(values, { setSubmitting, resetForm }) => {
                 setTimeout(() => {
                   setSubmitting(false);
-                  resetForm()
+                  resetForm();
                 }, 400);
               }}
             >

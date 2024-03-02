@@ -5,7 +5,6 @@ import { BasketContext } from "../../context/basketContext";
 import { WishlistContext } from "../../context/wishlistContext";
 import { UserContext } from "../../context/userContext";
 
-
 function ShopCards() {
   const [products, setProducts] = useState([]);
   const [filterData, setFilterData] = useState("");
@@ -124,7 +123,6 @@ function ShopCards() {
                 <p>Showing all {currentProducts.length} results</p>
               </div>
               <div className="select">
-
                 <select
                   name="sortOptions"
                   className="sortOptions"
@@ -169,34 +167,36 @@ function ShopCards() {
                       <div className="image">
                         <img src={x.image} alt="" />
                         <div className="hover">
-                      <div
-                        className="cart-shopping"
-                        onClick={() => {
-                          decode ? addBasket(x) : navigate("/login");
-                        }}
-                      >
-                        <i className="fa-light fa-cart-shopping"></i>
-                      </div>
-                      <div
-                        className="heart"
-                        onClick={() => {
-                          decode ? addRemoveWishlist(x) : navigate("/login");
-                        }}
-                      >
-                        <i
-                          className={`${
-                            checkIsWishlist(x)
-                              ? "fa-sharp fa-solid fa-heart"
-                              : "fa-sharp fa-light fa-heart"
-                          }`}
-                        ></i>
-                      </div>
-                      <Link to={"/shopDetail/" + x._id}>
-                        <div className="eye">
-                          <i className="fa-light fa-eye"></i>
+                          <div
+                            className="cart-shopping"
+                            onClick={() => {
+                              decode ? addBasket(x) : navigate("/login");
+                            }}
+                          >
+                            <i className="fa-light fa-cart-shopping"></i>
+                          </div>
+                          <div
+                            className="heart"
+                            onClick={() => {
+                              decode
+                                ? addRemoveWishlist(x)
+                                : navigate("/login");
+                            }}
+                          >
+                            <i
+                              className={`${
+                                checkIsWishlist(x)
+                                  ? "fa-sharp fa-solid fa-heart"
+                                  : "fa-sharp fa-light fa-heart"
+                              }`}
+                            ></i>
+                          </div>
+                          <Link to={"/shopDetail/" + x._id}>
+                            <div className="eye">
+                              <i className="fa-light fa-eye"></i>
+                            </div>
+                          </Link>
                         </div>
-                      </Link>
-                    </div>
                       </div>
                       <div className="text">
                         <h3>{x.name}</h3>
@@ -218,7 +218,6 @@ function ShopCards() {
                 )}
               </div>
             </div>
-
           </div>
         </div>
       </div>

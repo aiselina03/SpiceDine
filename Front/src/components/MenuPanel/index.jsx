@@ -19,6 +19,8 @@ function MenuPanel() {
   const { token, decode } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(true);
   const myFileInput = useRef();
+  const [filterData, setFilterData] = useState("");
+  const [sort, setSort] = useState(null);
 
   useEffect(() => {
     getAll();
@@ -37,6 +39,19 @@ function MenuPanel() {
         setProducts(data);
         setIsLoading(false);
       });
+  }
+  function handleSortChange(e) {
+    setSort(e.target.value);
+  }
+  function handleFilter(e) {
+    setFilterData(e.target.value);
+  }
+
+  function lower(data) {
+    if (typeof data === "string") {
+      return data.toLowerCase();
+    }
+    return data;
   }
 
   async function handleSubmit(e) {
@@ -91,14 +106,13 @@ function MenuPanel() {
       </div>
       <div className="adminPanels">
         <div className="panels">
-            <h3>
-          <NavLink to={"/menuPanel"}>Menu</NavLink>
-        </h3>
-        <h3>
-          <NavLink to={"/userPanel"}>User</NavLink>
-        </h3>
+          <h3>
+            <NavLink to={"/menuPanel"}>Menu</NavLink>
+          </h3>
+          <h3>
+            <NavLink to={"/userPanel"}>User</NavLink>
+          </h3>
         </div>
-      
       </div>
       <div className="menuPanel">
         <form onSubmit={handleSubmit} className="form">
@@ -133,7 +147,7 @@ function MenuPanel() {
             className="categoryName"
             onChange={(e) => setCategoryId(e.target.value)}
           >
-            <option value="">Select a Category</option>
+            <option value=""> Category</option>
             {category.map((item) => (
               <option key={item._id} value={item._id}>
                 {item.categoryName}
@@ -154,6 +168,37 @@ function MenuPanel() {
 
           <button>Add Product</button>
         </form>
+
+        <div className="selecSection">
+          <div className="select">
+            <select
+              name="sortOptions"
+              className="sortOptions"
+              onChange={handleSortChange}
+            >
+              <option value="">FILTER</option>
+              <option value="AtoZ">A to Z</option>
+              <option value="ZtoA">Z to A</option>
+              <option value="LowtoHigh">Low to High</option>
+              <option value="HightoLow">High to Low</option>
+            </select>
+          </div>
+
+          <div className="select">
+            <select
+              name="filterOptions"
+              className="filterOptions"
+              onChange={handleFilter}
+            >
+              <option value="">FILTER CATEGORY</option>
+              <option value="starters">Starters</option>
+              <option value="main">Main</option>
+              <option value="dessert">Dessert</option>
+              <option value="drinks">Drinks</option>
+            </select>
+          </div>
+        </div>
+
         <div className="table">
           {isLoading ? (
             <div className="loaderCenterCards">
@@ -177,28 +222,49 @@ function MenuPanel() {
               </thead>
               <tbody>
                 {products &&
-                  products.map((x) => (
-                    <tr key={x._id}>
-                      <td>
-                        <img src={x.image} alt="" />
-                      </td>
-                      <td>{x.name}</td>
-                      <td>${x.price}</td>
-                      <td>{x.categoryId?.categoryName}</td>
-                      <td>{x.ingredient}</td>
-                      <td>{x.description}</td>
-                      <td>
-                        <Link to={`/menuEditPanel/${x._id}`}>
-                          <button>Update</button>
-                        </Link>
-                      </td>
-                      <td>
-                        <button onClick={() => deleteById(x._id)}>
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  products
+
+                    .filter((x) =>
+                      x.categoryId.categoryName.includes(filterData)
+                    )
+                    .sort((a, b) => {
+                      if (sort === "AtoZ") {
+                        return lower(a.name) > lower(b.name) ? 1 : -1;
+                      } else if (sort === "ZtoA") {
+                        return lower(b.name) > lower(a.name) ? 1 : -1;
+                      } else if (sort === "LowtoHigh") {
+                        return a.price - b.price;
+                      } else if (sort === "HightoLow") {
+                        return b.price - a.price;
+                      } else {
+                        return 0;
+                      }
+                    })
+
+                    .map((x) => (
+                      <tr key={x._id}>
+                        <td>
+                          <Link to={"/shopDetail/" + x._id}>
+                            <img src={x.image} alt="" />
+                          </Link>
+                        </td>
+                        <td>{x.name}</td>
+                        <td>${x.price}</td>
+                        <td>{x.categoryId?.categoryName}</td>
+                        <td>{x.ingredient}</td>
+                        <td>{x.description}</td>
+                        <td>
+                          <Link to={`/menuEditPanel/${x._id}`}>
+                            <button>Update</button>
+                          </Link>
+                        </td>
+                        <td>
+                          <button onClick={() => deleteById(x._id)}>
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
               </tbody>
             </table>
           )}

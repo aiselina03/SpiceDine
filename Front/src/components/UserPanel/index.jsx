@@ -50,63 +50,67 @@ function UserPanel() {
           href="https://png.pngitem.com/pimgs/s/530-5308172_restaurant-gastronomique-icone-hd-png-download.png"
         />
       </Helmet>
-       <div className="account">
+      <div className="account">
         <p>
           <Link to={"/adminPanel"}>
             <i className="fa-solid fa-house"></i>
           </Link>
-         User Panel
+          User Panel
         </p>
       </div>
       <div className="adminPanels">
         <div className="panels">
-            <h3>
-          <NavLink to={"/menuPanel"}>Menu</NavLink>
-        </h3>
-        <h3>
-          <NavLink to={"/userPanel"}>User</NavLink>
-        </h3>
+          <h3>
+            <NavLink to={"/menuPanel"}>Menu</NavLink>
+          </h3>
+          <h3>
+            <NavLink to={"/userPanel"}>User</NavLink>
+          </h3>
         </div>
-      
       </div>
       <div className="userPanel">
         <div className="table">
-        {isLoading ? (
-              <div className="loaderCenterCards">
-                <div className="loader">
-                  <i className="fa-solid fa-spinner fa-spin"></i>
-                </div>
+          {isLoading ? (
+            <div className="loaderCenterCards">
+              <div className="loader">
+                <i className="fa-solid fa-spinner fa-spin"></i>
               </div>
-            ) : (
-          <table>
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>UserName</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Update</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users &&
-                users.map((x) => (
-                  <tr key={x._id}>
-                    <th>{x._id}</th>
-                    <td>{x.username}</td>
-                    <td>{x.email}</td>
-                    <td>{x.role}</td>
-                    <td>
-                      <Link to={`/userEditPanel/${x._id}`}><button>Update</button></Link>
-                    </td>
-                    <td>
-                      <button onClick={() => deleteUser(x._id)}>Delete</button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>)}
+            </div>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>UserName</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Update</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users &&
+                  users.map((x) => (
+                    <tr key={x._id}>
+                      <th>{x._id}</th>
+                      <td>{x.username}</td>
+                      <td>{x.email}</td>
+                      <td>{x.role}</td>
+                      <td>
+                        <Link to={`/userEditPanel/${x._id}`}>
+                          <button>Update</button>
+                        </Link>
+                      </td>
+                      <td>
+                        <button onClick={() => deleteUser(x._id)}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
 

@@ -119,7 +119,7 @@ function MenuEditpanel() {
             className="categoryName"
             onChange={(e) => setCategoryId(e.target.value)}
           >
-            <option value="">Select a Category</option>
+            <option value=""> Category</option>
             {category.map((item) => (
               <option key={item._id} value={item._id}>
                 {item.categoryName}
