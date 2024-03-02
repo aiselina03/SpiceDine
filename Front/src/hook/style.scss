@@ -1242,11 +1242,30 @@ body {
       }
       .order {
         .noOrder {
-          background-color: var(  --main-some-bg-color);
+          background-color: var(--main-some-bg-color);
           p {
             color: var(--main-basket-p-color);
-        
           }
+        }
+      }
+    }
+  }
+  .adminPanels {
+    .panels {
+      background-color: var(--main-some-bg-color);
+      h3 {
+        a {
+          color: var(--main-p-color);
+        }
+      }
+    }
+  }
+  .adminPanel {
+    .panel {
+      background-color: var(--main-some-bg-color);
+      h3 {
+        a {
+          color: var(--main-p-color);
         }
       }
     }

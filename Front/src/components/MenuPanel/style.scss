@@ -180,7 +180,6 @@
   }
 }
 
-
 @media only screen and (min-width: 300px) and (max-width: 410px) {
   .adminPanels {
     .panels {
@@ -188,11 +187,11 @@
       min-height: auto;
       display: flex;
       align-items: center;
-      gap: 50px ;
+      gap: 50px;
       justify-content: center;
       padding: 6px;
-      h3{
-        a{
+      h3 {
+        a {
           font-size: 23px;
         }
       }
