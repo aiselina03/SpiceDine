@@ -11,7 +11,7 @@ function Navbar() {
   const [sticky, setSticky] = useState(false);
   const [showSearchResult, setShowSearchResult] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  const { decode } = useContext(UserContext);
+  const { decode, logOut } = useContext(UserContext);
   const { searchQuery, setSearchQuery } = useContext(SearchContext);
   const { id } = useParams();
   let location = useLocation();
@@ -157,9 +157,17 @@ function Navbar() {
               <i className="fa-light fa-heart"></i>
             </NavLink>
             {decode ? (
-              <NavLink to={"/login"}>
-                <i className="fa-solid fa-user"></i>
-              </NavLink>
+              <>
+                <div className="user">
+                  <NavLink to={"/login"}>
+                    <i className="fa-solid fa-user"></i>
+                  </NavLink>
+                  <div className="logOut" onClick={logOut}>
+                    <i className="fa-regular fa-right-from-bracket"></i>
+                    <p>Log Out</p>
+                  </div>
+                </div>
+              </>
             ) : (
               <NavLink to={"/login"}>
                 <i className="fa-light fa-user"></i>

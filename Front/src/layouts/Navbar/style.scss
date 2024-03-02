@@ -175,6 +175,33 @@
       color: #c7a97f;
     }
   }
+  .user {
+    .logOut {
+      transition: all 600ms;
+      position: absolute;
+      height: 40px;
+      color: #cdc5b9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      z-index: 10;
+      font-weight: 400;
+      font-family: "Roboto", serif;
+      p {
+        margin-left: 5px;
+      }
+      &:hover {
+        color: #c7a97f;
+      }
+    }
+    &:hover {
+      .logOut {
+        opacity: 1;
+      }
+    }
+  }
+
   a {
     color: #cdc5b9;
     transition: all 700ms;

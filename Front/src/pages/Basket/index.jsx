@@ -105,9 +105,15 @@ function Basket() {
                   <p>${getTotal()}</p>
                 </div>
                 <div>
-                  <Link to={"/checkout"}>
-                    <button>PROCEED TO CHECKOUT</button>
-                  </Link>
+                  {basket.length ? (
+                    <Link to={"/checkout"}>
+                      <button>PROCEED TO CHECKOUT</button>
+                    </Link>
+                  ) : (
+                    <Link to={"/shop"}>
+                      <button>PROCEED TO CHECKOUT</button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
