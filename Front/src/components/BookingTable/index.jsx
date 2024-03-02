@@ -24,7 +24,8 @@ function BookingTable() {
                 name: "",
                 phone: "",
                 date: "",
-                time: "",
+                timeStart: "",
+                timeFinish: "",
                 category: "",
                 service: "",
               }}
@@ -32,7 +33,8 @@ function BookingTable() {
                 name: Yup.string().required("Required"),
                 phone: Yup.number().required("Required"),
                 date: Yup.string().required("Required"),
-                time: Yup.string().required("Required"),
+                timeStart: Yup.string().required("Required"),
+                timeFinish: Yup.string().required("Required"),
                 category: Yup.string().required("Required"),
                 service: Yup.string().required("Required"),
               })}
@@ -43,7 +45,7 @@ function BookingTable() {
                 }, 400);
               }}
             >
-              <Form className="form">
+              <Form className="form" action="#"> 
                 <div className="row1">
                   <div className="input">
                     <label htmlFor="name" className="label">
@@ -102,18 +104,18 @@ function BookingTable() {
                     <ErrorMessage name="date" component={"span"}/>
                   </div>
                   <div className="input">
-                    <label htmlFor="time" className="label">
+                    <label htmlFor="timeStart" className="label">
                       Start from
                     </label>
-                    <Field name="time" type="time" className="fields" />
-                    <ErrorMessage name="time" component={"span"}/>
+                    <Field name="timeStart" type="time" className="fields" />
+                    <ErrorMessage name="timeStart" component={"span"}/>
                   </div>
                   <div className="input">
-                    <label htmlFor="time" className="label">
+                    <label htmlFor="timeFinish" className="label">
                       Finish by
                     </label>
-                    <Field name="time" type="time" className="fields" />
-                    <ErrorMessage name="time" component={"span"}/>
+                    <Field name="timeFinish" type="time" className="fields" />
+                    <ErrorMessage name="timeFinish" component={"span"}/>
                   </div>
                 </div>
                 <div className="btn">

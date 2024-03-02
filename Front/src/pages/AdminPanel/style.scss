@@ -1,16 +1,27 @@
 .adminPanel {
   width: 90%;
-  min-height: 30vh;
-  margin: 60px auto;
+  min-height: 25vh;
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  h3 {
-    a {
-      font-size: 26px;
-      color: #c7a97f;
-      font-family: "Cormorant", serif;
+  .panel {
+    width: 400px;
+    min-height: 6vh;
+    background-color: #16272d;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+    h3 {
+      a {
+        font-size: 26px;
+        color: #cdc5b9;
+        font-family: "Cormorant", serif;
+      }
+      .active {
+        color: #c7a97f;
+      }
     }
   }
 }
@@ -43,8 +54,19 @@
 
 @media only screen and (min-width: 300px) and (max-width: 410px) {
   .adminPanel {
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
+    .panel {
+      width: 290px;
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      justify-content: center;
+      padding: 6px;
+      h3{
+        a{
+          font-size: 23px;
+        }
+      }
+    }
   }
 }

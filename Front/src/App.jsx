@@ -19,8 +19,7 @@ import AdminPanel from "./pages/AdminPanel";
 import ResetPassword from "./pages/ResetPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivateRoute from "./routes/PrivateRoute";
-import MenuPanel from "./components/MenuPanel";
-import UserPanel from "./components/UserPanel";
+
 import MenuEditpanel from "./components/MenuUpdatePanel";
 import UserEditPanel from "./components/UserUpdatePanel";
 import Account from "./pages/Account";
@@ -30,6 +29,8 @@ import Addresses from "./pages/Adresses";
 import Checkout from "./pages/Checkout";
 import BillingAddress from "./components/BillingAddress";
 import ShippingAddress from "./components/ShippingAddress";
+import MenuPanel from "./components/MenuPanel";
+import UserPanel from "./components/UserPanel";
 
 function App() {
   return (

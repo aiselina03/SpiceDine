@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import Scroll from "../../components/Scroll";
-import Mode from "../../components/Mode";
-import Cursor from "../../components/Cursor";
+import Scroll from "../Scroll";
+import Mode from "../Mode";
+import Cursor from "../Cursor";
 import { UserContext } from "../../context/userContext";
 import "./style.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 function MenuPanel() {
@@ -12,7 +12,8 @@ function MenuPanel() {
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  const [categoryName, setCategoryName] = useState("");
+  const [categoryId, setCategoryId] = useState("");
+  const [category, setCategory] = useState([]);
   const [ingredient, setIngredient] = useState("");
   const [description, setDescription] = useState("");
   const { token, decode } = useContext(UserContext);
@@ -23,12 +24,18 @@ function MenuPanel() {
     getAll();
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:3000/category/")
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
+  }, []);
+
   function getAll() {
     fetch("http://localhost:3000/menuWithCategory")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-         setIsLoading(false);
+        setIsLoading(false);
       });
   }
 
@@ -38,7 +45,7 @@ function MenuPanel() {
     formData.append("image", image);
     formData.append("name", name);
     formData.append("price", price);
-    formData.append("categoryId", categoryName);
+    formData.append("categoryId", categoryId);
     formData.append("ingredient", ingredient);
     formData.append("description", description);
 
@@ -67,7 +74,7 @@ function MenuPanel() {
 
   return (
     <>
-          <Helmet>
+      <Helmet>
         <title>SpiceDine</title>
         <link
           rel="icon"
@@ -81,6 +88,17 @@ function MenuPanel() {
           </Link>
           Menu Panel
         </p>
+      </div>
+      <div className="adminPanels">
+        <div className="panels">
+            <h3>
+          <NavLink to={"/menuPanel"}>Menu</NavLink>
+        </h3>
+        <h3>
+          <NavLink to={"/userPanel"}>User</NavLink>
+        </h3>
+        </div>
+      
       </div>
       <div className="menuPanel">
         <form onSubmit={handleSubmit} className="form">
@@ -111,12 +129,17 @@ function MenuPanel() {
             onChange={(e) => setPrice(e.target.value)}
           />
 
-          <input
-            type="text"
-            placeholder="Category"
-            onChange={(e) => setCategoryName(e.target.value)}
-          />
-
+          <select
+            className="categoryName"
+            onChange={(e) => setCategoryId(e.target.value)}
+          >
+            <option value="">Select a Category</option>
+            {category.map((item) => (
+              <option key={item._id} value={item._id}>
+                {item.categoryName}
+              </option>
+            ))}
+          </select>
           <input
             type="text"
             placeholder="Ingredient"
@@ -132,48 +155,53 @@ function MenuPanel() {
           <button>Add Product</button>
         </form>
         <div className="table">
-        {isLoading ? (
-              <div className="loaderCenterCards">
-                <div className="loader">
-                  <i className="fa-solid fa-spinner fa-spin"></i>
-                </div>
+          {isLoading ? (
+            <div className="loaderCenterCards">
+              <div className="loader">
+                <i className="fa-solid fa-spinner fa-spin"></i>
               </div>
-            ) : (
-          <table>
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>CategoryName</th>
-                <th>Ingredient</th>
-                <th>Description</th>
-                <th>Update</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products &&
-                products.map((x) => (
-                  <tr key={x._id}>
-                    <td>
-                      <img src={x.image} alt="" />
-                    </td>
-                    <td>{x.name}</td>
-                    <td>${x.price}</td>
-                    <td>{x.categoryId?.categoryName}</td>
-                    <td>{x.ingredient}</td>
-                    <td>{x.description}</td>
-                    <td>
-                    <Link to={`/menuEditPanel/${x._id}`}><button>Update</button></Link>
-                    </td>
-                    <td>
-                      <button onClick={() => deleteById(x._id)}>Delete</button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>)}
+            </div>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>CategoryName</th>
+                  <th>Ingredient</th>
+                  <th>Description</th>
+                  <th>Update</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products &&
+                  products.map((x) => (
+                    <tr key={x._id}>
+                      <td>
+                        <img src={x.image} alt="" />
+                      </td>
+                      <td>{x.name}</td>
+                      <td>${x.price}</td>
+                      <td>{x.categoryId?.categoryName}</td>
+                      <td>{x.ingredient}</td>
+                      <td>{x.description}</td>
+                      <td>
+                        <Link to={`/menuEditPanel/${x._id}`}>
+                          <button>Update</button>
+                        </Link>
+                      </td>
+                      <td>
+                        <button onClick={() => deleteById(x._id)}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
       <Mode />

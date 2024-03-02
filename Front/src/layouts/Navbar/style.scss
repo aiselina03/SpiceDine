@@ -23,6 +23,9 @@
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     padding: 20px 0;
+    &:hover {
+      background-color: #0b1315;
+    }
     .message {
       p {
         &:hover {

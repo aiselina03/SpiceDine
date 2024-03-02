@@ -272,7 +272,7 @@ function Navbar() {
         </div>
       </div>
       <div className={`searchPanel  ${openSearch ? "searchToggle" : ""}`}>
-        <i class="fa-sharp fa-light fa-xmark" onClick={toggleSearch}></i>
+        <i className="fa-sharp fa-light fa-xmark" onClick={toggleSearch}></i>
         <div className="search">
           <input
             type="text"

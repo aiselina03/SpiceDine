@@ -6,10 +6,10 @@ import Mode from "../../components/Mode";
 import Cursor from "../../components/Cursor";
 import "./style.scss";
 
-
 function MenuEditpanel() {
   const { id } = useParams();
   const { token, decode } = useContext(UserContext);
+  const [category, setCategory] = useState([]);
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
@@ -17,6 +17,12 @@ function MenuEditpanel() {
   const [ingredient, setIngredient] = useState("");
   const [description, setDescription] = useState("");
   const myFileInput = useRef();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/category/")
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
+  }, []);
 
   useEffect(() => {
     if (!decode || decode.role !== "admin") {
@@ -39,7 +45,7 @@ function MenuEditpanel() {
       const productData = await response.json();
       setName(productData.name);
       setPrice(productData.price);
-      setCategoryId(productData.categoryId);
+      setCategoryId(productData.categoryId.categoryName);
       setIngredient(productData.ingredient);
       setDescription(productData.description);
     } catch (error) {
@@ -49,33 +55,26 @@ function MenuEditpanel() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (decode && decode.role === "admin"){
-          try {
-      const response = await fetch(`http://localhost:3000/api/menu/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          name,
-          price,
-          categoryId,
-          ingredient,
-          description,
-        }),
-      });
-      if (response.ok) {
-        window.location.href = "/menuPanel";
-      }
-      console.log("Product updated successfully");
-    } catch (error) {
-      console.error("Error updating product:", error);
-    }
-    }
+    const formData = new FormData();
+    formData.append("image", image);
+    formData.append("name", name);
+    formData.append("price", price);
+    formData.append("categoryId", categoryId);
+    formData.append("ingredient", ingredient);
+    formData.append("description", description);
 
+    const data = await fetch(`http://localhost:3000/api/menu/${id}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: formData,
+    });
+    if (data.ok) {
+      window.location.href = "/menuPanel";
+    }
+    console.log("Product updated successfully");
   }
-
   return (
     <>
       <div className="account">
@@ -87,7 +86,7 @@ function MenuEditpanel() {
         </p>
       </div>
       <div className="menuUpdatePanel">
-        <form action="#" onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className="form">
           <input
             type="file"
             onChange={(e) => setImage(e.target.files[0])}
@@ -116,12 +115,17 @@ function MenuEditpanel() {
             placeholder="Price"
           />
 
-          <input
-            type="text"
-            value={categoryId}
+          <select
+            className="categoryName"
             onChange={(e) => setCategoryId(e.target.value)}
-            placeholder="Category ID"
-          />
+          >
+            <option value="">Select a Category</option>
+            {category.map((item) => (
+              <option key={item._id} value={item._id}>
+                {item.categoryName}
+              </option>
+            ))}
+          </select>
 
           <input
             type="text"
@@ -148,6 +152,3 @@ function MenuEditpanel() {
 }
 
 export default MenuEditpanel;
-
-
-

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/userContext";
-import Scroll from "../../components/Scroll";
-import Mode from "../../components/Mode";
-import Cursor from "../../components/Cursor";
+import Scroll from "../Scroll";
+import Mode from "../Mode";
+import Cursor from "../Cursor";
 import "./style.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 function UserPanel() {
@@ -57,6 +57,17 @@ function UserPanel() {
           </Link>
          User Panel
         </p>
+      </div>
+      <div className="adminPanels">
+        <div className="panels">
+            <h3>
+          <NavLink to={"/menuPanel"}>Menu</NavLink>
+        </h3>
+        <h3>
+          <NavLink to={"/userPanel"}>User</NavLink>
+        </h3>
+        </div>
+      
       </div>
       <div className="userPanel">
         <div className="table">

@@ -15,28 +15,34 @@ function UserEditPanel() {
   const [role, setRole] = useState("");
 
   useEffect(() => {
-    if (!decode || decode.role !== "admin") {
+    if  (!decode) {
       window.location.href = "/";
     } else {
       getUserById(id);
     }
-  }, [id]);
+  }, [decode, id])
 
-  async function getUserById(_id) {
-    const response = await fetch(`http://localhost:3000/api/users/${_id}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    if (!response.ok) {
-      console.log("update olundu");
+  async function getUserById(id) {
+    try {
+      const response = await fetch(`http://localhost:3000/api/users/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+      const userData = await response.json();
+      setUsername(userData.username);
+      setEmail(userData.email);
+      setRole(userData.role)
+    } catch (error) {
+      console.error("Error fetching user data:", error);
     }
-    const userData = await response.json();
-    setUsername(userData.username);
-    setEmail(userData.email);
-    setRole(userData.role);
   }
+  
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -48,7 +54,7 @@ function UserEditPanel() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ username, email, role }),
+          body: JSON.stringify({ username, email, role}),
         });
         if (response.ok) {
           window.location.href = "/userPanel";
@@ -71,7 +77,7 @@ function UserEditPanel() {
         </p>
       </div>
       <div className="userUpdatePanel">
-        <form action="#" onSubmit={handleSubmit} className="form">
+        <form  onSubmit={handleSubmit} className="form">
           <input
             type="text"
             value={username}
