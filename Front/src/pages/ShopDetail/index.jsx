@@ -39,8 +39,8 @@ function ShopDetail() {
       </Helmet>
       <div className="account">
         <p>
-          <Link to={"/"}>
-            <i className="fa-solid fa-house"></i>
+          <Link to={"/shop"}>
+            <i className="fa-regular fa-shop"></i>
           </Link>
           Shop Detail
         </p>
@@ -111,7 +111,7 @@ function ShopDetail() {
                 <div className="addBasket">
                   <button
                     onClick={() => {
-                      decode ? addBasket(products) : navigate("/login")
+                      decode ? addBasket(products) : navigate("/login");
                     }}
                   >
                     <i className="fa-regular fa-cart-shopping"></i>ADD TO CART

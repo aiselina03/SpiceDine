@@ -56,6 +56,7 @@ function MenuPanel() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     const formData = new FormData();
     formData.append("image", image);
     formData.append("name", name);
@@ -71,6 +72,7 @@ function MenuPanel() {
       },
       body: formData,
     });
+
     getAll();
   }
 

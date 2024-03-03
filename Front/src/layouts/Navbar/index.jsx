@@ -3,7 +3,7 @@ import "./style.scss";
 import { NavLink, useLocation, useParams } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 import { SearchContext } from "../../context/searchContext";
-import SearchResult from "../../components/SaerchResult";
+import SearchResult from "../../components/SearchResult";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

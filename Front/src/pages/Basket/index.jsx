@@ -24,8 +24,8 @@ function Basket() {
       </Helmet>
       <div className="account">
         <p>
-          <Link to={"/"}>
-            <i className="fa-solid fa-house"></i>
+          <Link to={"/shop"}>
+            <i className="fa-regular fa-shop"></i>
           </Link>
           Cart
         </p>
