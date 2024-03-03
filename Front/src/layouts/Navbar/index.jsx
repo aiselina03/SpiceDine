@@ -4,6 +4,7 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 import { SearchContext } from "../../context/searchContext";
 import SearchResult from "../../components/SearchResult";
+import { BasketContext } from "../../context/basketContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,7 @@ function Navbar() {
   const [sticky, setSticky] = useState(false);
   const [showSearchResult, setShowSearchResult] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  const { basket } = useContext(BasketContext);
   const { decode, logOut } = useContext(UserContext);
   const { searchQuery, setSearchQuery } = useContext(SearchContext);
   const { id } = useParams();
