@@ -175,7 +175,10 @@
       color: #c7a97f;
     }
   }
-
+  sup {
+    margin-left: 2px;
+    font-size: 14px;
+  }
   .user {
     .logOut {
       transition: all 600ms;

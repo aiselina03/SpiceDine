@@ -155,8 +155,10 @@ function Navbar() {
               className="fa-sharp fa-light fa-magnifying-glass"
               onClick={toggleSearch}
             ></i>
+  
             <NavLink to={"/wishlist"}>
               <i className="fa-light fa-heart"></i>
+
             </NavLink>
             {decode ? (
               <>
@@ -178,6 +180,7 @@ function Navbar() {
 
             <NavLink to={"/basket"}>
               <i className="fa-light fa-cart-shopping"></i>
+              <sup>{basket.length ? basket.length : ""}</sup>
             </NavLink>
           </div>
         </div>
@@ -240,6 +243,7 @@ function Navbar() {
 
             <NavLink to={"/basket"}>
               <i className="fa-light fa-cart-shopping"></i>
+              <sup>{basket.length ? basket.length : ""}</sup>
             </NavLink>
           </div>
         </div>
