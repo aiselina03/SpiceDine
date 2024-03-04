@@ -197,7 +197,7 @@ function Checkout() {
                     </thead>
                     <tbody>
                       {basket.map((x) => (
-                        <tr>
+                        <tr key={x._id}>
                           <td>
                             <h4 className="name">{x.name}</h4>
                             <span> × {x.count}</span>
