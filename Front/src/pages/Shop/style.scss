@@ -1,0 +1,314 @@
+.shopPages {
+  width: 100%;
+  max-width: 100%;
+  .shopPage {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+      ),
+      url("/src/images/bg-menu.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .headers {
+      margin-top: 80px;
+      h2 {
+        font-size: 68px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+      p {
+        width: 600px;
+        color: #cdc5b9;
+        font-size: 20px;
+        line-height: 40px;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+}
+
+.loaderCenterCards {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .shopPages {
+    .shopPage {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 35px;
+        }
+        p {
+          width: 260px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+    }
+    .cardsPages {
+      .cardsPage {
+        min-height: auto;
+        gap: 20px;
+        .shopFilter {
+          display: none;
+        }
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 20px;
+          .selecSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+          }
+          .shopCards {
+            display: grid;
+            grid-template-columns: auto;
+            .shopCard {
+              width: 280px;
+              height: 400px;
+              .image {
+                width: 280px;
+                height: 340px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .shopPages {
+    .shopPage {
+      width: 100%;
+      height: 45vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 37px;
+        }
+        p {
+          width: 460px;
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+    }
+    .cardsPages {
+      .cardsPage {
+        min-height: auto;
+        gap: 20px;
+        .shopFilter {
+          display: none;
+        }
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 20px;
+          .selecSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+          }
+          .shopCards {
+            display: grid;
+            grid-template-columns: auto;
+            .shopCard {
+              width: 400px;
+              height: 400px;
+              .image {
+                width: 400px;
+                height: 340px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .shopPages {
+    .shopPage {
+      width: 100%;
+      height: 40vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          width: 600px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+    .cardsPages {
+      .cardsPage {
+        min-height: auto;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .shopFilter {
+          display: none;
+        }
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 20px;
+          .selecSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 130px;
+          }
+          .shopCards {
+            display: grid;
+            grid-template-columns: auto auto;
+            .shopCard {
+              width: 320px;
+              height: 400px;
+              .image {
+                width: 320px;
+                height: 340px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .shopPages {
+    .shopPage {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          width: 700px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+    .cardsPages {
+      .cardsPage {
+        min-height: auto;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .shopFilter {
+          display: none;
+        }
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 0px;
+          .selecSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 130px;
+          }
+          .shopCards {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            justify-content: center;
+            .shopCard {
+              width: 400px;
+              height: 400px;
+              .image {
+                width: 400px;
+                height: 340px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .shopPages {
+    .cardsPages {
+      .cardsPage {
+        min-height: auto;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .shopFilter {
+          display: none;
+        }
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 0px;
+          .selecSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 130px;
+          }
+          .shopCards {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+            justify-content: center;
+            .shopCard {
+              width: 340px;
+              height: 400px;
+              .image {
+                width: 340px;
+                height: 340px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

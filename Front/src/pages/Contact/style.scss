@@ -1,0 +1,419 @@
+.contactPage {
+  width: 100%;
+  max-width: 100%;
+  .contactUs {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+      ),
+      url("/src/images/bg-contact.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .headers {
+      margin-top: 80px;
+      h2 {
+        font-size: 65px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+      p {
+        width: 600px;
+        color: #cdc5b9;
+        font-size: 20px;
+        line-height: 40px;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+  .map {
+    width: 80%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+    iframe {
+      width: 100%;
+      height: 535px;
+    }
+  }
+  .info {
+    width: 80%;
+    margin: 60px auto;
+    .infos {
+      min-height: 30vh;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 1px solid #393a34;
+      .contact,
+      .address,
+      .time {
+        text-align: center;
+        width: 400px;
+        height: 200px;
+        h2 {
+          font-size: 23px;
+          font-family: "Cormorant", serif;
+          color: #c7a97f;
+          font-weight: 400;
+          margin: 15px 0;
+        }
+        p {
+          color: #cdc5b9;
+          font-size: 16px;
+          line-height: 25px;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+      .address {
+        border-left: 1px solid #393a34;
+        border-right: 1px solid #393a34;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .contactPage {
+    .contactUs {
+      width: 100%;
+      height: 50vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 35px;
+        }
+        p {
+          width: 260px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+    }
+    .info {
+      .infos {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        border-bottom: none !important;
+        gap: 30px;
+        .contact,
+        .address,
+        .time {
+          text-align: center;
+          width: 270px;
+          height: 200px;
+        }
+        .address {
+          border-left: none !important;
+          border-right: none !important;
+        }
+      }
+    }
+    .sendMesagge {
+      .headers {
+        h2 {
+          font-size: 25px;
+        }
+        p {
+          width: 270px;
+          font-size: 20px;
+          line-height: 25px;
+          margin: 20px 0;
+        }
+      }
+      .form {
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .row {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          .input {
+            .label {
+              font-size: 22px;
+            }
+            .field {
+              width: 270px;
+            }
+          }
+        }
+
+        
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .contactPage {
+    .contactUs {
+      width: 100%;
+      height: 45vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 37px;
+        }
+        p {
+          width: 460px;
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+    }
+    .info {
+      .infos {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        border-bottom: none !important;
+        gap: 40px;
+
+        .address {
+          border-left: none !important;
+          border-right: none !important;
+        }
+      }
+    }
+    .sendMesagge {
+      .headers {
+        h2 {
+          font-size: 27px;
+        }
+        p {
+          width: 450px;
+          font-size: 20px;
+          line-height: 25px;
+          margin: 20px 0;
+        }
+      }
+      .form {
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .row {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          .input {
+            .label {
+              font-size: 24px;
+            }
+            .field {
+              width: 450px;
+            }
+          }
+        }
+
+        .textarea {
+          width: 450px;
+
+          .label {
+            font-size: 25px;
+          }
+          .form-control {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .contactPage {
+    .contactUs {
+      width: 100%;
+      height: 40vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          width: 600px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+    .info {
+      .infos {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        border-bottom: none !important;
+        gap: 30px;
+        .contact,
+        .address,
+        .time {
+          width: 300px;
+          h2 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+        .address {
+          border-left: none !important;
+          border-right: none !important;
+        }
+      }
+    }
+    .sendMesagge {
+      .headers {
+        h2 {
+          font-size: 27px;
+        }
+        p {
+          width: 600px;
+          font-size: 20px;
+          line-height: 25px;
+          margin: 20px 0;
+        }
+      }
+      .form {
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .row {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          .input {
+            .label {
+              font-size: 24px;
+            }
+            .field {
+              width: 700px;
+            }
+          }
+        }
+
+        .textarea {
+          width: 700px;
+
+          .label {
+            font-size: 25px;
+          }
+          .form-control {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
+  .contactPage {
+    .contactUs {
+      width: 100%;
+      height: 40vh;
+      .headers {
+        margin-top: 0px;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          width: 700px;
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1350px) {
+  .contactPage {
+    .info {
+      .infos {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        .contact,
+        .address,
+        .time {
+          width: 260px;
+          h2 {
+            font-size: 23px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .sendMesagge {
+      .headers {
+        h2 {
+          font-size: 29px;
+        }
+        p {
+          width: 600px;
+          font-size: 22px;
+          line-height: 25px;
+          margin: 20px 0;
+        }
+      }
+      .form {
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .row {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          grid-template-columns: auto auto;
+          .input {
+            .label {
+              font-size: 24px;
+            }
+            .field {
+              width: 430px;
+            }
+          }
+        }
+
+        .textarea {
+          width: 900px;
+
+          .label {
+            font-size: 25px;
+          }
+          .form-control {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,519 @@
+.aboutSection {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .about {
+    width: 90%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    .story {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+          font-size: 35px;
+          font-family: "Cormorant", serif;
+          color: #c7a97f;
+          font-weight: 400;
+        }
+        p {
+          margin: 20px 0;
+          text-align: center;
+          line-height: 25px;
+          color: #cdc5b9;
+          font-size: 14px;
+          width: 400px;
+          font-family: "Roboto", sans-serif;
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border: 1px solid #c7a97f;
+          background-color: transparent;
+          font-family: "Roboto", serif;
+          width: 180px;
+          height: 50px;
+          font-size: 15px;
+          margin: 15px 0;
+          position: relative;
+          &:hover {
+            .opacity {
+              width: 180px;
+              height: 50px;
+              background-color: #c7a97f;
+              z-index: 1;
+            }
+            p {
+              color: white;
+              z-index: 2;
+            }
+          }
+
+          p {
+            color: #c7a97f;
+            transition: all 700ms;
+          }
+
+          .opacity {
+            position: absolute;
+            width: 0px;
+            left: 0;
+            top: 0;
+            height: 50px;
+            transition: all 700ms;
+          }
+        }
+      }
+      .image {
+        width: 420px;
+        height: auto;
+        margin: 30px 0;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 600ms ease-in-out 0s;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    .sec {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: auto auto;
+      .restaurantImage {
+        width: 400px;
+        height: 670px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 600ms ease-in-out 0s;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      .time {
+        height: 670px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #c7a97f;
+        .tallSquare {
+          width: 420px;
+          height: 600px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border: 1px solid #c7a97f;
+          .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .lunchTime {
+              h2 {
+                font-size: 30px;
+                font-family: "Cormorant", serif;
+                color: #c7a97f;
+                font-weight: 400;
+              }
+              p {
+                margin: 20px 0;
+                text-align: center;
+                line-height: 25px;
+                color: #cdc5b9;
+                font-size: 14px;
+                font-family: "Roboto", sans-serif;
+              }
+            }
+            .dinnerTime {
+              h2 {
+                font-size: 30px;
+                font-family: "Cormorant", serif;
+                color: #c7a97f;
+                font-weight: 400;
+              }
+              p {
+                margin: 20px 0;
+                text-align: center;
+                line-height: 25px;
+                color: #cdc5b9;
+                font-size: 14px;
+                font-family: "Roboto", sans-serif;
+              }
+            }
+            .contactNow {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+
+              h2 {
+                font-size: 30px;
+                font-family: "Cormorant", serif;
+                color: #c7a97f;
+                font-weight: 400;
+              }
+              p {
+                margin: 20px 0;
+                text-align: center;
+                line-height: 25px;
+                color: #cdc5b9;
+                font-size: 14px;
+                font-family: "Roboto", sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .aboutSection {
+    min-height: auto;
+    .about {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .story {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        .info {
+          h2 {
+            font-size: 23px;
+          }
+          p {
+            width: 280px;
+          }
+          .btn {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            margin: 15px 0;
+            &:hover {
+              .opacity {
+                width: 150px;
+                height: 40px;
+              }
+            }
+            .opacity {
+              height: 40px;
+            }
+          }
+        }
+        .image {
+          width: 268px;
+          height: auto;
+          margin: 20px 0;
+        }
+      }
+      .sec {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: auto;
+        .restaurantImage {
+          width: 268px;
+          height: auto;
+        }
+        .time {
+          margin-left: 5px;
+          height: 550px;
+          width: 270px;
+          .tallSquare {
+            width: 290px;
+            height: 530px;
+            .square {
+              .lunchTime {
+                h2 {
+                  font-size: 25px;
+                }
+              }
+              .dinnerTime {
+                h2 {
+                  font-size: 25px;
+                }
+              }
+              .contactNow {
+                h2 {
+                  font-size: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .aboutSection {
+    min-height: auto;
+    .about {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .story {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        .info {
+          h2 {
+            font-size: 26px;
+          }
+          p {
+            width: 400px;
+          }
+          .btn {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            margin: 15px 0;
+            &:hover {
+              .opacity {
+                width: 150px;
+                height: 40px;
+              }
+            }
+            .opacity {
+              height: 40px;
+            }
+          }
+        }
+        .image {
+          width: 400px;
+          height: auto;
+          margin: 20px 0;
+        }
+      }
+      .sec {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: auto;
+        .restaurantImage {
+          width: 400px;
+          height: auto;
+        }
+        .time {
+          margin-left: 15px;
+          height: 570px;
+          width: 360px;
+          .tallSquare {
+            width: 400px;
+            height: 530px;
+            .square {
+              .lunchTime {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+              .dinnerTime {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+              .contactNow {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .aboutSection {
+    min-height: auto;
+    .about {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .story {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        .info {
+          h2 {
+            font-size: 26px;
+          }
+          p {
+            width: 350px;
+          }
+          .btn {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            margin: 15px 0;
+            &:hover {
+              .opacity {
+                width: 150px;
+                height: 40px;
+              }
+            }
+            .opacity {
+              height: 40px;
+            }
+          }
+        }
+        .image {
+          width: 370px;
+          height: auto;
+          margin: 20px 0;
+        }
+      }
+      .sec {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: auto auto;
+        .restaurantImage {
+          width: 350px;
+          height: auto;
+        }
+        .time {
+          margin-left: 0px;
+          height: 570px;
+          width: 320px;
+          .tallSquare {
+            width: 350px;
+            height: 530px;
+            .square {
+              .lunchTime {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+              .dinnerTime {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+              .contactNow {
+                h2 {
+                  font-size: 27px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1370px) {
+  .aboutSection {
+    min-height: auto;
+    .about {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .story {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        .info {
+          h2 {
+            font-size: 30px;
+          }
+          p {
+            width: 470px;
+          }
+          .btn {
+            width: 180px;
+            height: 45px;
+            font-size: 12px;
+            margin: 15px 0;
+            &:hover {
+              .opacity {
+                width: 180px;
+                height: 45px;
+              }
+            }
+            .opacity {
+              height: 45px;
+            }
+          }
+        }
+        .image {
+          width: 470px;
+          height: auto;
+          margin: 20px 0;
+        }
+      }
+      .sec {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: auto auto;
+        .restaurantImage {
+          width: 470px;
+          height: 550px;
+        }
+        .time {
+          margin-left: 0px;
+          height: 550px;
+          width: 420px;
+          .tallSquare {
+            width: 470px;
+            height: 500px;
+            .square {
+              .lunchTime {
+                h2 {
+                  font-size: 28px;
+                }
+              }
+              .dinnerTime {
+                h2 {
+                  font-size: 28px;
+                }
+              }
+              .contactNow {
+                h2 {
+                  font-size: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

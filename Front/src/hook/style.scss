@@ -1,0 +1,1273 @@
+:root {
+  --main-bg-color: #0b1315;
+  --main-text-color: #c7a97f;
+  --main-some-bg-color: #16272d;
+  --main-p-color: #cdc5b9;
+  --main-book-color: #cdc5b9;
+  --main-menu-bg-color: #0b1315;
+  --main-category-border-color: #393a34;
+  --main-category-button-color: #cdc5b9;
+  --main-field-text-color: white;
+  --main-hover-color: #dcd7e3;
+  --main-privacy-p-color: #a5a099;
+  --main-pagination-hover-bg-color: white;
+  --main-pagination-hover-color: #c7a97f;
+  --main-search-bg-color: transparent;
+  --main-search-basket-table-color: #ffffff33;
+  --main-basket-p-color: #a5a099;
+}
+
+.light {
+  --main-bg-color: #fbf8f3;
+  --main-text-color: #0b1315;
+  --main-some-bg-color: #faedda;
+  --main-p-color: #666666;
+  --main-book-color: #0b1315;
+  --main-menu-bg-color: #faedda;
+  --main-category-border-color: #c7a97f;
+  --main-category-button-color: #0b1315;
+  --main-field-bg-color: #fff5e4;
+  --main-field-text-color: #0b1315;
+  --main-hover-color: #666666;
+  --main-privacy-p-color: #666666;
+  --main-pagination-hover-bg-color: #16272d;
+  --main-pagination-hover-color: white;
+  --main-search-bg-color: #faedda;
+  --main-search-basket-table-color: #c7a97f;
+  --main-basket-p-color: #0b1315;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  .homePage {
+    .aboutSection {
+      .about {
+        .story {
+          .info {
+            h2 {
+              color: var(--main-text-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+        .time {
+          .tallSquare {
+            .square {
+              .lunchTime {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+              .dinnerTime {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+              .contactNow {
+                h2 {
+                  color: var(--main-text-color);
+                }
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .aboutIcons {
+      .iconsContainer {
+        .iconCards {
+          .iconCard {
+            .iconImage {
+              background-color: var(--main-some-bg-color);
+            }
+            h2 {
+              color: var(--main-text-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+      }
+    }
+    .bookingSection {
+      .bookingTable {
+        background-color: var(--main-some-bg-color);
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .service {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .form {
+            .row1 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .field {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .row2 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .fields {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
+    .ourMenu {
+      .containerMenu {
+        .menuView {
+          .view {
+            background-color: var(--main-menu-bg-color);
+            .category {
+              border-bottom: 1px solid var(--main-category-border-color);
+              button {
+                color: var(--main-category-button-color);
+              }
+            }
+            .menuList {
+              .product {
+                .head {
+                  p {
+                    color: var(--main-p-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .homeChef {
+      .chefContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .chefs {
+          .chef {
+            p {
+              color: var(--main-p-color);
+            }
+            h2 {
+              color: var(--main-text-color);
+            }
+          }
+        }
+      }
+    }
+    .bestSeller {
+      .bestContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .bestCards {
+          .bestCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .aboutPage {
+    .aboutRestaurant {
+      .textAbout {
+        span {
+          color: var(--main-p-color);
+        }
+        h2 {
+          color: var(--main-text-color);
+        }
+        p {
+          color: var(--main-p-color);
+        }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+    .aboutSlider {
+      .slick-dots {
+        li button:before {
+          color: var(--main-text-color) !important;
+        }
+      }
+    }
+    .counterContainer {
+      .counts {
+        border-bottom: 1px solid var(--main-category-border-color);
+      }
+    }
+    .aboutContainer {
+      .aboutStory {
+        .story {
+          span {
+            color: var(--main-p-color);
+          }
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+          .btn {
+            &:hover {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
+  }
+  .contactPage {
+    .info {
+      .infos {
+        border-bottom: 1px solid var(--main-category-border-color);
+        .contact,
+        .address,
+        .time {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .address {
+          border-left: 1px solid var(--main-category-border-color);
+          border-right: 1px solid var(--main-category-border-color);
+        }
+      }
+    }
+    .sendMesagge {
+      .headers {
+        h2 {
+          color: var(--main-text-color);
+        }
+        p {
+          color: var(--main-p-color);
+        }
+      }
+      .form {
+        .row {
+          .input {
+            .label {
+              color: var(--main-p-color);
+            }
+            .field {
+              color: var(--main-p-color);
+            }
+          }
+        }
+        .textarea {
+          .label {
+            color: var(--main-p-color);
+          }
+          .form-control {
+            color: var(--main-p-color);
+          }
+        }
+      }
+    }
+  }
+  .menuPage {
+    .startersMenu {
+      .sMenu {
+        .menuStarters {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .starters {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .mainMenu {
+      .mMenu {
+        .menuMain {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .main {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .dessertMenu {
+      .dMenu {
+        .menuDessert {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .dessert {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .drinksMenu {
+      .dMenu {
+        .menuDrinks {
+          .headers {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .drinks {
+            .head {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .chefPage {
+    .chefAbout {
+      .chefMaster {
+        .chefJonathon {
+          background-color: var(--main-some-bg-color);
+          h2 {
+            color: var(--main-text-color);
+          }
+          h3 {
+            color: var(--main-p-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+      }
+      .chefAssistant {
+        .assistantAbout {
+          background-color: var(--main-some-bg-color);
+          span {
+            color: var(--main-p-color);
+          }
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+      }
+      .homeChef {
+        .chefContainer {
+          .header {
+            h2 {
+              color: var(--main-text-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .chefs {
+            .chef {
+              p {
+                color: var(--main-p-color);
+              }
+              h2 {
+                color: var(--main-text-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .appointment {
+    .bookingTable {
+      background-color: var(--main-some-bg-color);
+      .header {
+        h2 {
+          color: var(--main-text-color);
+        }
+        p {
+          color: var(--main-p-color);
+        }
+      }
+      .service {
+        h2 {
+          color: var(--main-book-color);
+        }
+        .form {
+          .row1 {
+            .input {
+              .label {
+                color: var(--main-book-color);
+              }
+              .field {
+                color: var(--main-book-color);
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .label {
+                color: var(--main-book-color);
+              }
+              .fields {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .errorPage {
+    h2 {
+      color: var(--main-book-color);
+    }
+    p {
+      color: var(--main-p-color);
+    }
+  }
+  .loginPage {
+    .login {
+      .loginContent {
+        .form {
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+          .input2 {
+            .label {
+              color: var(--main-book-color);
+            }
+            .fields {
+              background-color: var(--main-field-bg-color);
+
+              .field {
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .loginText {
+            .checkbox {
+              .checkbox-input {
+                .label {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+          }
+
+          p {
+            &:hover {
+              color: var(--main-hover-color);
+            }
+          }
+        }
+        .haveAccount {
+          p {
+            color: var(--main-book-color);
+            a {
+              &:hover {
+                color: var(--main-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .signUpPage {
+    .signUp {
+      .signUpContent {
+        .form {
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+          .input2 {
+            .label {
+              color: var(--main-book-color);
+            }
+            .fields {
+              background-color: var(--main-field-bg-color);
+
+              .field {
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .signUpText {
+            .privacy {
+              p {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+        .haveAccount {
+          p {
+            color: var(--main-p-color);
+            a {
+              &:hover {
+                color: var(--main-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .privacyPolicy {
+    .privacy {
+      p {
+        color: var(--main-privacy-p-color);
+      }
+    }
+  }
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        .form {
+          p {
+            color: var(--main-privacy-p-color);
+          }
+          .input {
+            .label {
+              color: var(--main-book-color);
+            }
+            .field {
+              background-color: var(--main-field-bg-color);
+              color: var(--main-field-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .cardsPages {
+    .cardsPage {
+      .shopFilter {
+        .search {
+          background-color: var(--main-search-bg-color);
+          .fa-magnifying-glass {
+            color: var(--main-p-color);
+          }
+          input {
+            color: var(--main-p-color);
+          }
+        }
+        .filterCategories {
+          .head {
+            background-color: var(--main-some-bg-color);
+          }
+          .filter {
+            button {
+              color: var(--main-p-color);
+            }
+          }
+        }
+        .recentProducts {
+          .head {
+            background-color: var(--main-some-bg-color);
+          }
+          .recent {
+            .item {
+              .text {
+                p {
+                  color: var(--main-p-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .shop {
+        .selecSection {
+          .length {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .select {
+            .sortOptions {
+              background-color: var(--main-search-bg-color);
+              color: var(--main-p-color);
+            }
+          }
+        }
+        .shopCards {
+          .shopCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .pagination {
+          .container {
+            button {
+              &:hover {
+                background-color: var(--main-pagination-hover-bg-color);
+                color: var(--main-pagination-hover-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .basketPage {
+    .basket {
+      .table {
+        table {
+          border: 1px solid var(--main-search-basket-table-color);
+          thead {
+            tr {
+              th {
+                border: 1px solid var(--main-search-basket-table-color);
+                color: var(--main-privacy-p-color);
+              }
+            }
+          }
+          tbody {
+            tr {
+              border: 1px solid var(--main-search-basket-table-color);
+              td {
+                color: var(--main-basket-p-color);
+                border: 1px solid var(--main-search-basket-table-color);
+                .fa-trash-can {
+                  &:hover {
+                    color: var(--main-privacy-p-color);
+                  }
+                }
+              }
+            }
+          }
+
+          tfoot {
+            tr {
+              td {
+                .column {
+                  input {
+                    border: 1px solid var(--main-privacy-p-color);
+                    color: var(--main-basket-p-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .checkout {
+          background-color: var(--main-some-bg-color);
+          h1 {
+            color: var(--main-text-color);
+          }
+          .subTotal {
+            h3 {
+              color: var(--main-privacy-p-color);
+            }
+            p {
+              color: var(--main-text-color);
+            }
+          }
+          .cardTotal {
+            h3 {
+              color: var(--main-privacy-p-color);
+            }
+            p {
+              color: var(--main-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .wishlistPage {
+    .wishlist {
+      .table {
+        table {
+          border: 1px solid var(--main-search-basket-table-color);
+          thead {
+            tr {
+              th {
+                border: 1px solid var(--main-search-basket-table-color);
+                color: var(--main-privacy-p-color);
+              }
+            }
+          }
+          tbody {
+            tr {
+              border: 1px solid var(--main-search-basket-table-color);
+              td {
+                color: var(--main-basket-p-color);
+                border: 1px solid var(--main-search-basket-table-color);
+                .fa-sharp {
+                  &:hover {
+                    color: var(--main-privacy-p-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .details {
+    .detailPage {
+      .detail {
+        .info {
+          .stars {
+            .fa-sharp {
+              color: var(--main-p-color);
+            }
+            p {
+              color: var(--main-p-color);
+            }
+          }
+          .ingredient {
+            color: var(--main-category-button-color);
+          }
+          .desc {
+            color: var(--main-p-color);
+          }
+
+          .text {
+            p {
+              color: var(--main-category-button-color);
+            }
+          }
+          .share {
+            p {
+              color: var(--main-category-button-color);
+            }
+          }
+        }
+      }
+    }
+    .bestSeller {
+      .bestContainer {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .bestCards {
+          .bestCard {
+            .text {
+              h3 {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+        .btn {
+          &:hover {
+            p {
+              color: var(--main-p-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .menuPanel {
+    .table {
+      table {
+        border: 1px solid var(--main-search-basket-table-color);
+        tr {
+          th {
+            border: 1px solid var(--main-search-basket-table-color);
+            color: var(--main-basket-p-color);
+          }
+        }
+        td {
+          color: var(--main-basket-p-color);
+          border: 1px solid var(--main-search-basket-table-color);
+        }
+      }
+    }
+  }
+  .userPanel {
+    .table {
+      table {
+        border: 1px solid var(--main-search-basket-table-color);
+        tr {
+          th {
+            border: 1px solid var(--main-search-basket-table-color);
+            color: var(--main-basket-p-color);
+          }
+        }
+        td {
+          color: var(--main-basket-p-color);
+          border: 1px solid var(--main-search-basket-table-color);
+        }
+      }
+    }
+  }
+  .menuUpdatePanel {
+    .form {
+      input {
+        color: var(--main-field-text-color);
+      }
+    }
+  }
+  .userUpdatePanel {
+    .form {
+      input {
+        color: var(--main-field-text-color);
+      }
+    }
+  }
+  .servicesPage {
+    .servicesP {
+      .service {
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+      }
+    }
+    .roomServices {
+      .rooms {
+        .room1 {
+          .diningRoom {
+            background-color: var(--main-some-bg-color);
+
+            .text {
+              color: var(--main-p-color);
+            }
+            .head {
+              h2 {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+        .room2 {
+          .cornerRoom {
+            background-color: var(--main-some-bg-color);
+
+            .text {
+              color: var(--main-p-color);
+            }
+            .head {
+              h2 {
+                color: var(--main-p-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .privateBookingSection {
+      .privateBookingTable {
+        background-color: var(--main-some-bg-color);
+        .header {
+          h2 {
+            color: var(--main-text-color);
+          }
+          p {
+            color: var(--main-p-color);
+          }
+        }
+        .service {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .form {
+            .row1 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .field {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .row2 {
+              .input {
+                .label {
+                  color: var(--main-book-color);
+                }
+                .fields {
+                  color: var(--main-book-color);
+                }
+              }
+            }
+            .textarea {
+              .label {
+                color: var(--main-book-color);
+              }
+              .form-control {
+                color: var(--main-book-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .feedBack {
+      .comments {
+        background-color: var(--main-some-bg-color);
+        .feed {
+          p {
+            color: var(--main-book-color);
+          }
+        }
+      }
+    }
+  }
+  .faqsPage {
+    .faqs {
+      .faqs_content {
+        .faq_card {
+          .question {
+            background-color: var(--main-search-bg-color);
+            p {
+              color: var(--main-text-color);
+              &:hover {
+                color: var(--main-p-color);
+              }
+            }
+          }
+          .answer {
+            color: var(--main-p-color);
+            background-color: var(--main-search-bg-color);
+          }
+        }
+      }
+    }
+  }
+  .checkoutPage {
+    .checkout {
+      .billing {
+        h2 {
+          color: var(--main-book-color);
+        }
+        .formik {
+          .form {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+              }
+            }
+            .textareas {
+              .label {
+                color: var(--main-p-color);
+              }
+              .textarea {
+                background-color: var(--main-search-bg-color);
+              }
+            }
+          }
+        }
+      }
+      .order {
+        h2 {
+          color: var(--main-book-color);
+        }
+        .productOrder {
+          .subTotal {
+            table {
+              background-color: var(--main-search-bg-color);
+              tr {
+                th {
+                  color: #c7a97f;
+                }
+                td {
+                  color: var(--main-basket-p-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .accountPages {
+    .accountPage {
+      .nav {
+        border-right: 1px solid var(--main-search-basket-table-color);
+        a {
+          color: var(--main-basket-p-color);
+        }
+      }
+      .dashboard {
+        p {
+          color: var(--main-privacy-p-color);
+          a {
+            color: var(--main-text-color);
+          }
+        }
+      }
+      .accountDetails {
+        .form {
+          .row1 {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .row2 {
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .field {
+                background-color: var(--main-search-bg-color);
+                color: var(--main-field-text-color);
+              }
+            }
+          }
+          .passwordChange {
+            h2 {
+              color: var(--main-p-color);
+            }
+            .input {
+              .label {
+                color: var(--main-p-color);
+              }
+              .fields {
+                background-color: var(--main-search-bg-color);
+                .fieldP {
+                  color: var(--main-field-text-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .addresses {
+        .head {
+          color: var(--main-privacy-p-color);
+        }
+        .addressData {
+          .address1 {
+            .billing {
+              border-bottom: 1px solid var(--main-search-basket-table-color);
+            }
+            p {
+              color: var(--main-privacy-p-color);
+            }
+          }
+          .address2 {
+            .shipping {
+              border-bottom: 1px solid var(--main-search-basket-table-color);
+            }
+            p {
+              color: var(--main-privacy-p-color);
+            }
+          }
+        }
+      }
+      .billingAddress {
+        .billing {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .formik {
+            .form {
+              .input {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .field {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+              .textareas {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .textarea {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          h2 {
+            color: var(--main-book-color);
+          }
+          .formik {
+            .form {
+              .input {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .field {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+              .textareas {
+                .label {
+                  color: var(--main-p-color);
+                }
+                .textarea {
+                  background-color: var(--main-search-bg-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      .order {
+        .noOrder {
+          background-color: var(--main-some-bg-color);
+          p {
+            color: var(--main-basket-p-color);
+          }
+        }
+      }
+    }
+  }
+  .adminPanels {
+    .panels {
+      background-color: var(--main-some-bg-color);
+      h3 {
+        a {
+          color: var(--main-p-color);
+        }
+      }
+    }
+  }
+  .adminPanel {
+    .panel {
+      background-color: var(--main-some-bg-color);
+      h3 {
+        a {
+          color: var(--main-p-color);
+        }
+      }
+    }
+  }
+}

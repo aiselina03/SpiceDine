@@ -1,0 +1,312 @@
+.shippingAddress {
+  .shipping {
+    h2 {
+      color: #c7a97f;
+      font-family: "Cormorant", serif;
+      margin-bottom: 20px;
+    }
+    .formik {
+      .form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Roboto", serif;
+        .row1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          .input {
+            .field {
+              width: 400px;
+            }
+          }
+        }
+        .input {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin: 6px 0;
+          span {
+            color: red;
+          }
+          .label {
+            color: #cdc5b9;
+            span {
+              color: red;
+            }
+          }
+          .field {
+            background-color: transparent;
+            outline: none;
+            border: 1px solid #c7a97f;
+            color: white;
+            width: 820px;
+            height: 40px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+          }
+        }
+        button {
+          margin-top: 10px;
+          font-size: 15px;
+          border: none;
+          background-color: #c7a97f;
+          width: 820px;
+          height: 50px;
+          cursor: pointer;
+          color: #0b1315;
+          font-weight: bold;
+          transition: all 600ms;
+          &:hover {
+            background-color: #dcd7e3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          .formik {
+            .form {
+              .row1 {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                .input {
+                  .field {
+                    width: 280px;
+                  }
+                }
+              }
+              .input {
+                .field {
+                  width: 280px;
+                }
+              }
+              button {
+                width: 280px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          .formik {
+            .form {
+              .row1 {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                .input {
+                  .field {
+                    width: 460px;
+                  }
+                }
+              }
+              .input {
+                .field {
+                  width: 460px;
+                }
+              }
+              button {
+                width: 460px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 10px !important;
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          .formik {
+            .form {
+              .row1 {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                .input {
+                  .field {
+                    width: 700px;
+                  }
+                }
+              }
+              .input {
+                .field {
+                  width: 700px;
+                }
+              }
+              button {
+                width: 700px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          margin-left: 40px;
+          .formik {
+            .form {
+              .row1 {
+                display: flex;
+
+                gap: 30px;
+                .input {
+                  .field {
+                    width: 335px;
+                  }
+                }
+              }
+              .input {
+                .field {
+                  width: 700px;
+                }
+              }
+              button {
+                width: 700px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1350px) {
+  .accountPages {
+    .accountPage {
+      min-height: auto;
+      .nav {
+        width: 20%;
+
+        h2 {
+          margin-right: 30px !important;
+          margin: 20px 0;
+          line-height: 30px !important;
+        }
+      }
+      .shippingAddress {
+        .shipping {
+          margin-left: 40px;
+          .formik {
+            .form {
+              .row1 {
+                display: flex;
+
+                gap: 30px;
+                .input {
+                  .field {
+                    width: 360px;
+                  }
+                }
+              }
+              .input {
+                .field {
+                  width: 750px;
+                }
+              }
+              button {
+                width: 750px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

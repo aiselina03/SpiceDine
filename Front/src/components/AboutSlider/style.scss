@@ -1,0 +1,27 @@
+.aboutSlider {
+  width: 100%;
+  max-width: 100%;
+  min-height: 70vh;
+  .photo {
+    padding: 0 15px;
+    outline: none;
+    img {
+      width: 700px;
+    }
+  }
+  .slick-prev {
+    display: none !important;
+  }
+
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -40px !important;
+    li button:before {
+      color: #c7a97f !important;
+      font-size: 10px !important;
+    }
+  }
+}

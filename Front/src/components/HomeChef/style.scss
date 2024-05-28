@@ -1,0 +1,124 @@
+.homeChef {
+  width: 100%;
+  max-width: 100%;
+  min-height: 60vh;
+  .chefContainer {
+    width: 90%;
+    margin: 60px auto;
+    .header {
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+      }
+      p {
+        margin: 20px 0;
+        text-align: center;
+        line-height: 25px;
+        color: #cdc5b9;
+        font-size: 20px;
+        font-family: "Cormorant", serif;
+        font-style: italic;
+      }
+    }
+    .chefs {
+      margin-top: 50px;
+      .chef {
+        text-align: center;
+        margin-right: 30px;
+        .chefImage {
+          overflow: hidden;
+          position: relative;
+ 
+          &:hover {
+            .brandsHover {
+              opacity: 1;
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            transition: all 600ms;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+          .brandsHover {
+            transition: all 600ms;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 30%;
+            right: 0;
+            opacity: 0;
+            a {
+              position: relative;
+              &:hover {
+                .fa-brands {
+                  color: #c7a97f;
+                }
+                .hover {
+                  background-color: transparent;
+                }
+              }
+              .fa-brands {
+                transition: all 600ms;
+                top: 30%;
+                left: 30%;
+                position: absolute;
+                color: #000000;
+                font-size: 16px;
+              }
+              .hover {
+                transition: all 600ms;
+                border: 1px solid #c7a97f;
+                background-color: #c7a97f;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+        p {
+          margin-top: 20px;
+          font-family: "Cormorant", serif;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 400;
+          color: #a5a099;
+        }
+        h2 {
+          font-size: 32px;
+          font-family: "Cormorant", serif;
+          color: #c7a97f;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -40px !important;
+    li button:before {
+      color: #c7a97f !important;
+      font-size: 10px !important;
+    }
+  }
+}

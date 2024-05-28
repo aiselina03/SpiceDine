@@ -1,0 +1,72 @@
+.adminPanel {
+  width: 90%;
+  min-height: 25vh;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .panel {
+    width: 400px;
+    min-height: 6vh;
+    background-color: #16272d;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+    h3 {
+      a {
+        font-size: 26px;
+        color: #cdc5b9;
+        font-family: "Cormorant", serif;
+      }
+      .active {
+        color: #c7a97f;
+      }
+    }
+  }
+}
+
+.account {
+  width: 100%;
+  height: 7vh;
+  max-width: 100%;
+  background-color: #16272d;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  p {
+    font-family: "Cormorant", serif;
+    margin-left: 60px;
+    color: #cdc5b9;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    a {
+      font-size: 17px;
+      margin-right: 9px;
+      cursor: pointer;
+      color: #cdc5b9;
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 410px) {
+  .adminPanel {
+    .panel {
+      width: 290px;
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      justify-content: center;
+      padding: 6px;
+      h3{
+        a{
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

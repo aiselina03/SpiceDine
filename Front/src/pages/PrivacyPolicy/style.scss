@@ -1,0 +1,44 @@
+.privacyPolicy {
+  width: 90%;
+  margin: 50px auto;
+  .privacy {
+    h2 {
+      font-family: "Cormorant", serif;
+      font-size: 27px;
+      color: #c7a97f;
+      margin: 20px 0;
+    }
+    p {
+      font-family: "Roboto", serif;
+      font-size: 16px;
+      color: #a5a099;
+      line-height: 30px;
+    }
+  }
+}
+
+.account {
+  width: 100%;
+  height: 7vh;
+  max-width: 100%;
+  background-color: #16272d;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  p {
+    font-family: "Cormorant", serif;
+    margin-left: 60px;
+    color: #cdc5b9;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    a {
+      font-size: 17px;
+      margin-right: 9px;
+      cursor: pointer;
+      color: #cdc5b9;
+    }
+  }
+}

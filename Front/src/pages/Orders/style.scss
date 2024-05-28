@@ -1,0 +1,163 @@
+.accountPages {
+  width: 80%;
+  margin: 60px auto;
+  .accountPage {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    min-height: 50vh;
+    .nav {
+      width: 20%;
+      border-right: 1px solid #ffffff33;
+      font-family: "Cormorant", serif;
+      a {
+        color: #a5a099;
+        transition: all 600ms;
+        &:hover {
+          color: #c7a97f;
+        }
+      }
+      .active {
+        color: #c7a97f;
+      }
+      h2 {
+        font-size: 23px;
+        line-height: 60px;
+      }
+    }
+    .order {
+      width: 80%;
+      font-family: "Roboto", serif;
+      margin-left: 50px;
+      .noOrder {
+        height: 35px;
+        background-color: #16272d;
+
+        p {
+          padding: 5px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 10px;
+          margin-top: 20px;
+          color: #a5a099;
+          font-size: 17px;
+          line-height: 27px;
+
+          a {
+            color: #c7a97f;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 20px !important;
+        }
+      }
+      .order {
+        width: 100%;
+        margin-left: 0px;
+        .noOrder {
+          height: 105px;
+
+          p {
+            padding: 25px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 0px;
+            font-size: 17px;
+            line-height: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .accountPages {
+    .accountPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      min-height: auto !important;
+      .nav {
+        width: 100% !important;
+        border-right: none !important;
+        height: 100px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        h2 {
+          font-size: 21px !important;
+          line-height: 20px !important;
+        }
+      }
+      .order {
+        width: 100%;
+        margin-left: 0px;
+        .noOrder {
+          height: 105px;
+
+          p {
+            padding: 25px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 0px;
+            font-size: 17px;
+            line-height: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .accountPages {
+    .accountPage {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      min-height: auto !important;
+      .nav {
+        width: 30%;
+        h2 {
+          font-size: 23px;
+          margin: 20px 0 !important;
+          line-height: 30px !important;
+        }
+      }
+    }
+  }
+}

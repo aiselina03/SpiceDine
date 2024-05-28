@@ -1,0 +1,116 @@
+.resetPasswordPage {
+  width: 80%;
+  margin: 50px auto;
+  .resetPassword {
+    width: 100%;
+    max-width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto", serif;
+    .resetContent {
+      border: 1px solid #c7a97f;
+      width: 550px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      .form {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          font-family: "Roboto", serif;
+          font-size: 16px;
+          color: #a5a099;
+          line-height: 20px;
+          margin-bottom: 20px;
+        }
+        .input {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          span {
+            color: red;
+          }
+          .label {
+            color: #cdc5b9;
+          }
+          .field {
+            margin-top: 20px;
+            outline: none;
+            border: 1px solid #c7a97f;
+            background-color: transparent;
+            width: 500px;
+            height: 45px;
+            padding: 7px;
+            color: white;
+            font-size: 15px;
+          }
+        }
+
+        button {
+          margin-top: 20px;
+          height: 40px;
+          width: 500px;
+          background-color: #c7a97f;
+          color: #0b1315;
+          border: none;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 17px;
+          transition: all 600ms;
+          &:hover {
+            background-color: #dcd7e3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        width: 280px;
+        .form {
+          .input {
+            .field {
+              width: 250px;
+            }
+          }
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .resetPasswordPage {
+    .resetPassword {
+      .resetContent {
+        width: 450px;
+        .form {
+          .input {
+            .field {
+              width: 420px;
+            }
+          }
+          button {
+            width: 420px;
+          }
+        }
+      }
+    }
+  }
+}
+

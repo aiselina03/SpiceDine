@@ -1,0 +1,373 @@
+.bookingSection {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bookingTable {
+    width: 90%;
+    max-width: 100%;
+    margin: 80px auto;
+    min-height: 90vh;
+    background-color: #16272d;
+    padding: 40px;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        font-family: "Cormorant", serif;
+        color: #c7a97f;
+        font-weight: 400;
+      }
+      p {
+        width: 400px;
+        margin: 20px 0;
+        text-align: center;
+        line-height: 25px;
+        color: #cdc5b9;
+        font-size: 20px;
+        font-family: "Cormorant", serif;
+        font-style: italic;
+      }
+    }
+    .service {
+      width: 90%;
+      margin: 20px auto;
+      h2 {
+        line-height: 25px;
+        color: #cdc5b9;
+        font-size: 28px;
+        font-family: "Cormorant", serif;
+        font-weight: 500;
+      }
+      .form {
+        .row1 {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          margin: 25px 0;
+          .input {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            gap: 15px;
+            flex-direction: column;
+            span {
+              font-family: "Roboto", serif;
+              color: red;
+            }
+            .label {
+              line-height: 25px;
+              color: #cdc5b9;
+              font-size: 22px;
+              font-family: "Cormorant", serif;
+              font-weight: 500;
+            }
+            .field {
+              font-family: "Roboto", sans-serif;
+              width: 300px;
+              height: 40px;
+              padding: 8px;
+              color: #cdc5b9;
+              border: 1px solid #c7a97f;
+              background-color: transparent;
+              outline: none;
+              font-size: 15px;
+            }
+          }
+        }
+        .row2 {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          margin: 25px 0;
+          .input {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            gap: 15px;
+            flex-direction: column;
+            span {
+              font-family: "Roboto", serif;
+              color: red;
+            }
+            .label {
+              line-height: 25px;
+              color: #cdc5b9;
+              font-size: 20px;
+              font-family: "Cormorant", serif;
+              font-weight: 500;
+              font-size: 22px;
+            }
+            .fields {
+              font-family: "Roboto", sans-serif;
+              color: #cdc5b9;
+              border: 1px solid #c7a97f;
+              background-color: transparent;
+              width: 210px;
+              outline: none;
+              height: 40px;
+              font-size: 15px;
+              padding: 8px;
+            }
+          }
+        }
+
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border: 1px solid #c7a97f;
+          background-color: #c7a97f;
+          font-family: "Roboto", serif;
+          width: 160px;
+          height: 50px;
+          font-size: 15px;
+          margin: 60px 0;
+          position: relative;
+
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            transition: all 700ms;
+            cursor: pointer;
+          }
+
+          .opacity {
+            position: absolute;
+            width: 0px;
+            left: 0;
+            top: 0;
+            height: 50px;
+            transition: all 700ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .bookingSection {
+    min-height: auto;
+    .bookingTable {
+      height: auto;
+      .header {
+        h2 {
+          font-size: 25px;
+        }
+        p {
+          padding: 0 20px;
+          font-size: 17px;
+          width: 260px;
+        }
+      }
+      .service {
+        h2 {
+          font-size: 25px;
+        }
+        .form {
+          .row1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            margin: 25px 0;
+            .input {
+              display: flex;
+
+              gap: 15px;
+              flex-direction: column;
+              .field {
+                width: 240px;
+              }
+            }
+          }
+          .row2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .input {
+              display: flex;
+              gap: 15px;
+              flex-direction: column;
+              .fields {
+                width: 240px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .bookingSection {
+    min-height: auto;
+    .bookingTable {
+      height: auto;
+      .header {
+        h2 {
+          font-size: 27px;
+        }
+        p {
+          padding: 0 20px;
+          font-size: 18px;
+          width: 450px;
+        }
+      }
+      .service {
+        h2 {
+          font-size: 25px;
+        }
+        .form {
+          .row1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            margin: 25px 0;
+            .input {
+              display: flex;
+
+              gap: 15px;
+              flex-direction: column;
+              .field {
+                width: 400px;
+              }
+            }
+          }
+          .row2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .input {
+              display: flex;
+              gap: 15px;
+              flex-direction: column;
+              .fields {
+                width: 400px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .bookingSection {
+    min-height: auto;
+    .bookingTable {
+      height: auto;
+      .header {
+        h2 {
+          font-size: 29px;
+        }
+        p {
+          padding: 0 20px;
+          font-size: 19px;
+          width: 600px;
+        }
+      }
+      .service {
+        h2 {
+          font-size: 26px;
+        }
+        .form {
+          .row1 {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            margin: 25px 0;
+            .input {
+              display: flex;
+
+              gap: 15px;
+
+              .field {
+                width: 200px;
+              }
+            }
+          }
+          .row2 {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            gap: 20px;
+            .input {
+              display: flex;
+              gap: 15px;
+              flex-direction: column;
+              .fields {
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1460px) {
+  .bookingSection {
+    min-height: auto;
+    .bookingTable {
+      height: auto;
+      .header {
+        h2 {
+          font-size: 29px;
+        }
+        p {
+          padding: 0 20px;
+          font-size: 19px;
+          width: 600px;
+        }
+      }
+      .service {
+        h2 {
+          font-size: 26px;
+        }
+        .form {
+          .row1 {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            margin: 25px 0;
+            .input {
+              display: flex;
+
+              gap: 15px;
+
+              .field {
+                width: 190px;
+              }
+            }
+          }
+          .row2 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            gap: 20px;
+            .input {
+              display: flex;
+              gap: 15px;
+              flex-direction: column;
+              .fields {
+                width: 190px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
