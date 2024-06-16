@@ -242,7 +242,7 @@ function Navbar() {
 
             <NavLink to={"/basket"}>
               <i className="fa-light fa-cart-shopping"></i>
-              <sup>{basket.length ? basket.length : ""}</sup>
+              {decode ? <sup>{basket.length ? basket.length : ""}</sup> : ""}
             </NavLink>
           </div>
         </div>

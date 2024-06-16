@@ -8,28 +8,29 @@ import { Link, Navigate } from "react-router-dom";
 import "./style.scss";
 import { UserContext } from "../../context/userContext";
 
-
-
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const [loginError, setLoginError] = useState(""); 
   const { addToken, decode } = useContext(UserContext);
 
-  function handleSubmit(values) {
+  async function handleSubmit(values) {
     const { email, password } = values;
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        addToken(data);
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
       });
+      
+      const data = await response.json();
+      addToken(data);
+  
+    } catch (error) {
+      console.log("Error:", error);
+      setLoginError("Incorrect email or password"); 
+    }
   }
 
   return (
@@ -45,9 +46,7 @@ function LoginPage() {
       <div className="loginPage">
         <div className="login">
           {decode ? (
-            <>
-          <Navigate to={"/account"}></Navigate>
-            </>
+            <Navigate to={"/account"} />
           ) : (
             <div className="loginContent">
               <h2>Login</h2>
@@ -104,6 +103,7 @@ function LoginPage() {
                     </div>
                     <ErrorMessage name="password" component={"span"} />
                   </div>
+                  {loginError && <div className="error">{loginError}</div>} 
                   <div className="loginText">
                     <div className="checkbox">
                       <div className="checkbox-input">
@@ -127,7 +127,7 @@ function LoginPage() {
                 </p>
               </div>
             </div>
-           )} 
+          )}
         </div>
       </div>
       <Mode />
